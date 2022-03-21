@@ -67,7 +67,8 @@ public class AppUser implements UserDetails{
     this.username = username;
     this.email = email;
     this.password = password;
-    @Enumerated(EnumType.STRING)//Hva er dette og hvorfor trenger jeg det. Den er en enum men må ha med og får en feil?
+    //Still have to know why the line below fails
+    //@Enumerated(EnumType.STRING);//Hva er dette og hvorfor trenger jeg det. Den er en enum men må ha med og får en feil?
     this.appUserRole = appUserRole;
     this.locked = locked;
     this.enabled = enabled;

@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 public class AppUserService implements UserDetailsService{
 
     private final static String USER_NOT_FOUND_MSG = "user with email %s not found";
-    private final AppUserRepository appUserRepository;//idk lonbok skal fikse? spørre Adrian/Simon?
+    private final AppUserRepository appUserRepository;//idk lombok skal fikse? spørre Adrian/Simon?
 
     @Override//Find user by their username, here it's their email
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
