@@ -6,13 +6,19 @@
 
 //using System; //Trenger tydeligvis ikke denne
 
-namespace GradeBook
-{
-    class Program
-    {
-        static void Main(String[] args) 
-        {
-            Console.WriteLine("Hello Mr. Super Cool!");
+namespace GradeBook {
+    class Program {
+        static void Main(String[] args) {
+
+            Random rand = new Random();
+            int[] studentGrades = new int[1000];
+            for (int i = 0; i < 1000; i++) {
+                studentGrades[i] = rand.Next(0, 101);
+            }
+            Console.WriteLine($"Highest grade is {studentGrades.Max()}");
+            Console.WriteLine($"Average grade is {studentGrades.Sum()/studentGrades.Length}");
+            Console.WriteLine($"Lowest grade is {studentGrades.Min()}");
+
         }
     }
 }
