@@ -10,17 +10,21 @@ namespace GradeBook {
     class Program {
         static void Main(String[] args) {
 
-            Random rand = new Random();
-            int[] studentGrades = new int[1000];
-            for (int i = 0; i < 1000; i++) {
-                studentGrades[i] = rand.Next(0, 101);
-            }
-            Console.WriteLine($"Highest grade is {studentGrades.Max()}");
-            Console.WriteLine($"Average grade is {studentGrades.Sum()/studentGrades.Length}");
-            Console.WriteLine($"Lowest grade is {studentGrades.Min()}");
+            var book = new Book("My grade book");
+            book.AddGrade(89.1);
+            book.AddGrade(1.1);
+            book.AddGrade(67.1);
+            book.AddGrade(12.1);
+            book.AddGrade(33.1);
+            
+            var grades = new List<Double> { 12.7, 10.3, 6.11, 4.1 };
+            grades.Add(56.1);
+            book.showStats();
+
 
         }
     }
+
 }
 
 /*
