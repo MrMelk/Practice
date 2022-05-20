@@ -5,10 +5,13 @@
 
 
 //using System; //Trenger tydeligvis ikke denne
-
-namespace GradeBook {
-    class Program {
-        static void Main(String[] args) {
+using System.IO;
+namespace GradeBook
+{
+    class Program
+    {
+        static void Main(String[] args)
+        {
 
             var book = new Book("My grade book");
             book.AddGrade(89.1);
@@ -16,10 +19,14 @@ namespace GradeBook {
             book.AddGrade(67.1);
             book.AddGrade(12.1);
             book.AddGrade(33.1);
-            
+
             var grades = new List<Double> { 12.7, 10.3, 6.11, 4.1 };
             grades.Add(56.1);
             book.showStats();
+
+            string[] wollah = File.ReadAllLines(@"./hhhh.txt");
+
+            Console.WriteLine(wollah.Length);
 
 
         }
